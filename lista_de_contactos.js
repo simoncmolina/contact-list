@@ -1,8 +1,28 @@
-let contactList = ["Simón Coral","Pedro Garcés","Sergio Castañeda"];
+let contactList = [{
+    id:"1", 
+    nombre: "Simón", 
+    apellido: "Coral",
+    telefono: "3166264678",
+    ubicaciones: {ciudad: "Cali", direccion: "Centro"}
+},
+{
+    id: "2",
+    nombre: "Pedro",
+    apellido: "Garcés",
+    telefono: "3154567876",
+    ubicaciones: {ciudad: "Medellin", direccion: "Sur"}
+},
+{
+    id: "3",
+    nombre: "Jairo",
+    apellido: "García",
+    telefono: "3146578785",
+    ubicaciones: {ciudad: "Bogotá", direccion: "Norte"}
+}
+];
 
-
-function añadirContacto(nuevoContacto){
-    contactList.push(nuevoContacto);
+function añadirContacto(obj){
+    contactList.push(obj);
     return contactList; 
 
 }
@@ -15,7 +35,7 @@ function imprimirLista(){
     return contactList;
 }
 
+añadirContacto({id: "4", nombre: "Sonia", apellido: "Casas", telefono: "3148977654", ubicaciones:{ciudad: "Pereira", direccion: "Oeste"}});
 console.log(contactList);
-console.log(añadirContacto("Sebastian Espinosa"));
+console.log(contactList.length);
 console.log(eliminarContacto());
-console.log(imprimirLista());
