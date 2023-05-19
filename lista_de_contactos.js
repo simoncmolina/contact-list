@@ -37,5 +37,5 @@ function imprimirLista(){
 
 añadirContacto({id: "4", nombre: "Sonia", apellido: "Casas", telefono: "3148977654", ubicaciones:{ciudad: "Pereira", direccion: "Oeste"}});
 console.log(contactList);
-console.log(contactList.length);
+console.log("El Contacto a Eliminar es: " + contactList[contactList.length-1].nombre);
 console.log(eliminarContacto());
