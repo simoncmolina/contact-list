@@ -1,8 +1,9 @@
-let contactList = ["Simón Coral","Pedro Garces","Silvio Moreno"];
+let contactList = ["Simón Coral","Pedro Garcés","Sergio Castañeda"];
+
 
 function añadirContacto(nuevoContacto){
     contactList.push(nuevoContacto);
-    return contactList;
+    return contactList; 
 
 }
 function eliminarContacto(){
@@ -11,11 +12,10 @@ function eliminarContacto(){
 
 }
 function imprimirLista(){
-    console.log(contactList);
     return contactList;
 }
 
 console.log(contactList);
-console.log(añadirContacto("Tomas Cuervo"));
+console.log(añadirContacto("Sebastian Espinosa"));
 console.log(eliminarContacto());
 console.log(imprimirLista());
