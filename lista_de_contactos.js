@@ -26,9 +26,24 @@ function añadirContacto(obj){
     return contactList; 
 
 }
-function eliminarContacto(){
-    contactList.pop();
-    return contactList;
+function eliminarContacto(contactoEliminado){
+    if (contactoEliminado == "Simón"){
+        contactList.splice(0, 1);
+        return contactList;
+        
+    } else if (contactoEliminado == "Pedro"){ 
+        contactList.splice(1, 1);
+        return contactList;
+
+    } else if (contactoEliminado == "Jairo"){
+        contactList.splice(2, 1);
+        return contactList;
+
+    } else {
+        contactList.pop();
+        return contactList;
+    }
+    
 
 }
 function imprimirLista(){
@@ -37,5 +52,5 @@ function imprimirLista(){
 
 añadirContacto({id: "4", nombre: "Sonia", apellido: "Casas", telefono: "3148977654", ubicaciones:{ciudad: "Pereira", direccion: "Oeste"}});
 console.log(contactList);
-console.log("El Contacto a Eliminar es: " + contactList[contactList.length-1].nombre);
-console.log(eliminarContacto());
+eliminarContacto("Jairo");
+console.log(contactList);
