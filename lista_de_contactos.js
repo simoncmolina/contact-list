@@ -49,8 +49,15 @@ function eliminarContacto(contactoEliminado){
 function imprimirLista(){
     return contactList;
 }
+function actualizarContacto(id, contactoActualizado){
+    let buscarContacto = contactList.findIndex((obj => obj.id == id));
+    contactList[buscarContacto].nombre = contactoActualizado;
+    return contactList;
+}
 
 añadirContacto({id: "4", nombre: "Sonia", apellido: "Casas", telefono: "3148977654", ubicaciones:{ciudad: "Pereira", direccion: "Oeste"}});
 console.log(contactList);
 eliminarContacto("Jairo");
+console.log(contactList);
+actualizarContacto(1, "Francisco");
 console.log(contactList);
